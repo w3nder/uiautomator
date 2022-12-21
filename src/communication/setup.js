@@ -21,11 +21,7 @@ class Setup {
   }
 
   _installIfNecessary() {
-    const packages = new String(proc.execSync(['adb']
-    .concat(this._serialArr())
-    .concat(['shell pm list packages'])
-    .join(' ')))
-    .split('\n');
+    const packages = execSync(['adb', 'shell', 'pm', 'list', 'packages'].concat(this._serialArr()).join(' ')).toString().split('\n');
 
     let hasApp = false;
     let hasTestApp = false;
