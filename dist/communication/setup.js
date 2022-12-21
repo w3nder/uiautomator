@@ -36,7 +36,8 @@ var Setup = function () {
   }, {
     key: '_installIfNecessary',
     value: function _installIfNecessary() {
-      var packages = (0, _child_process.execSync)('adb shell pm list packages').toString().split('\n');
+      var packages = new String(proc.execSync(['adb'].concat(this._serialArr()).concat(['shell pm list packages']).join(' '))).split('\n');
+
       var hasApp = false;
       var hasTestApp = false;
       for (var i = 0; i < packages.length; i += 1) {

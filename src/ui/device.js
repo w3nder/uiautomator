@@ -58,6 +58,14 @@ export default class Device {
     return this._server.send('setText', [preparedSelector, text]);
   }
 
+  /**
+   * @returns Promise
+ */
+
+   selector(selector) {
+    return new Selector(selector);
+  }
+
 
   _register(methods, prefix) {
     for (let index = 0; index < methods.length; index += 1) {

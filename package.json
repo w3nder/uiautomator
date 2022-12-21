@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmca/uiautomator.git"
+    "url": "git+https://github.com/w3nder/uiautomator.git"
   },
   "author": "Filipe Arruda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fmca/uiautomator/issues"
+    "url": "https://github.com/w3nder/uiautomator/issues"
   },
-  "homepage": "https://github.com/fmca/uiautomator#readme",
+  "homepage": "https://github.com/w3nder/uiautomator#readme",
   "dependencies": {
     "humps": "^1.1.0",
     "request": "^2.72.0"

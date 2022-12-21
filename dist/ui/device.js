@@ -12,9 +12,9 @@ var _communication = require('../communication');
 
 var _communication2 = _interopRequireDefault(_communication);
 
-var _selector = require('./selector');
+var _selector2 = require('./selector');
 
-var _selector2 = _interopRequireDefault(_selector);
+var _selector3 = _interopRequireDefault(_selector2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -70,7 +70,7 @@ var Device = function () {
   }, {
     key: 'click',
     value: function click(selector) {
-      var preparedSelector = new _selector2.default(selector);
+      var preparedSelector = new _selector3.default(selector);
       return this._server.send('click', [preparedSelector]);
     }
 
@@ -91,8 +91,18 @@ var Device = function () {
   }, {
     key: 'setText',
     value: function setText(selector, text) {
-      var preparedSelector = new _selector2.default(selector);
+      var preparedSelector = new _selector3.default(selector);
       return this._server.send('setText', [preparedSelector, text]);
+    }
+
+    /**
+     * @returns Promise
+    */
+
+  }, {
+    key: 'selector',
+    value: function selector(_selector) {
+      return new _selector3.default(_selector);
     }
   }, {
     key: '_register',
